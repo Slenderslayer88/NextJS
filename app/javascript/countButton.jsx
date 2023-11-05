@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 
-export default function CountBtn({ amount }){
+export default function CountBtn({ amount, bgColor}){
     const [count, setCount] = useState(0);
 
     function handleClick() {
@@ -13,10 +13,17 @@ export default function CountBtn({ amount }){
         }
     }
 
+
+    const buttonStyle = {
+        backgroundColor: bgColor,
+        color: "white",
+        borderRadius: "10px"
+    }
+
     useEffect(rollOverCount, [count]);
     return (
         <div>
-            <button onClick={handleClick}>Increment +{amount}</button>
+            <button style={buttonStyle} onClick={handleClick}>Increment +{amount}</button>
             <h2>{count}</h2>
         </div>
     )

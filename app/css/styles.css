@@ -1,0 +1,20 @@
+.search_results{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.product {
+    margin: 2em;
+    padding: 1em;
+    width: 250px;
+    text-align: center;
+    display: block;
+    flex-flow: row wrap;
+    font-size: .75rem;
+    border: 5px solid black;
+    border-radius: 25px;
+}
+
+.product_img {
+    width: 100px;
+}
